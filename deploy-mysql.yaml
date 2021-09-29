@@ -1,0 +1,8 @@
+- name: Install and start mysql server
+  hosts: nana-test
+  become: true
+  tasks:
+    - name: install and start mysql
+      apt:
+        name: mysql-server-8.0
+        state: present

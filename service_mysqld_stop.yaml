@@ -1,0 +1,8 @@
+- name: start/stop mysqld service
+  hosts: nana-test
+  become: yes
+  tasks:
+    - name: start service mysqld
+      service:
+        name: mysql
+        state: started
